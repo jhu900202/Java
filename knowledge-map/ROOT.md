@@ -37,11 +37,11 @@ convention: 1
 - 인코딩 혼재: MS949 85 / ASCII 40 / UTF-8 9 / 기타 1. `study_181218/Var1.java`는 이미 깨진 채 커밋됨.
 - 하드코딩된 민감값이 있는 패키지: study_190304·190313·190328(DB 접속 정보), study_190308_mk3(SMS API 키·시크릿·전화번호), study_190318_mk2(사설 IP). 값은 어디에도 옮기지 않습니다.
 - 바이너리·덤프: `src/study_190304/ojdbc6.jar`(2.1MB), `SMSlib/*.jar`, `src/study_190311/naver.html`(169KB), `test*.txt`.
-- 빌드 설정 없음. 컴파일 시도하지 않음.
+- 빌드·실행하지 않는 아카이브입니다(빌드 설정 없음). 컴파일·실행을 시도하지 않음.
 - 미완성·오타 파일: ThreadNotify(빈 골격), GenerixEx04(main 비어 있음), Humen/Enermy, score.java 대소문자. 자세한 것은 각 단원의 "주의점".
 
 ## 열린 논의
-- [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 논의 전. 다음 액션: "소유자에게 묻는 질문" 1번부터.
+- [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 진행 중(용도 결정: 지식 아카이브). 다음 액션: "소유자에게 묻는 질문" 2번부터.
 
 ## 갱신 기록 (최근 10건)
 - 2026-09-25: 지식맵 생성(루트 + 단원 5 + INDEX + discussion 1). 모든 단원 status draft.
