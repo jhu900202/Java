@@ -23,7 +23,7 @@ public class JdbcInsert {
 			// 1) DBMS(오라클) 드라이버 클래스 로딩
 			Class.forName("oracle.jdbc.OracleDriver");
 			// 2) DB접속 시도 후 연결되면 Connection 객체를 반환
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
+			con = DriverManager.getConnection("<REDACTED_JDBC_URL>", "<REDACTED_USER>", "<REDACTED_PASSWORD>");
 			System.out.println("DB 연결 성공!");
 			
 			sql = "INSERT INTO emp (empno, ename, sal, hiredate) ";

@@ -198,7 +198,7 @@ class DBConnection {
 		Connection con = null;
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
+			con = DriverManager.getConnection("<REDACTED_JDBC_URL>", "<REDACTED_USER>", "<REDACTED_PASSWORD>");
 			System.out.println("DB Connect Successfully");
 		} catch (Exception e) {
 			e.printStackTrace();

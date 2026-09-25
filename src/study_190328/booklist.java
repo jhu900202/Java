@@ -12,9 +12,9 @@ public class booklist {
 	ResultSet resultset;
 
 	public booklist() {
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String userid = "madang";
-		String pwd = "madang";
+		String url = "<REDACTED_JDBC_URL>";
+		String userid = "<REDACTED_USER>";
+		String pwd = "<REDACTED_PASSWORD>";
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

@@ -20,7 +20,7 @@ public class SocketClient {
 
 			// 서버쪽 accepe() 호출하기
 			// IP, 사설IP, localhost
-			socket = new Socket("192.168.0.16", 10000);
+			socket = new Socket("<REDACTED_HOST>", 10000);
 
 			// 메시지를 보내기 위해 output사용
 			writer = new PrintWriter(socket.getOutputStream());
