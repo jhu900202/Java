@@ -199,10 +199,10 @@ evidence:
 3. **단원 선택**: ROOT 로드맵 표의 `triggers`·`summary`와 질문 키워드를 대조해 unit **1개**를 고릅니다. 경계가 겹치면(예: StringBuilder는 02와 03, URLConnection은 04와 05) 최대 2개. `units/` 전체를 읽지 않습니다.
 4. **매칭 실패 폴백**: (a) 패키지명·테마 이름("StarCraft", "라면")이 보이면 `grep -n "<키워드>" knowledge-map/INDEX.md`로 행을 찾아 주 단원을 엽니다. (b) 그래도 없으면 소유자에게 되묻습니다. 어떤 경우에도 `units/`·`src/` 전체 나열로 대체하지 않습니다.
 5. **패키지명 질문**("study_190318_mk3이 뭐였죠?"): ROOT를 열지 않고 `grep -n "<패키지명>" knowledge-map/INDEX.md`로 해당 행만 읽습니다. 한 줄 요약으로 답이 되면 거기서 멈추고, 부족할 때만 그 행의 주 단원을 엽니다.
-6. **소스 진입**: unit의 `evidence` 경로에서 시작합니다. 한 번에 패키지 1개, 파일 5개 이내. `src/04-io-network-threads/study_190311/naver.html`은 읽지 않습니다. MS949 파일은 `iconv -f CP949 -t UTF-8 <파일>`로 읽고 재저장하지 않습니다.
+6. **소스 진입**: unit의 `evidence` 경로에서 시작합니다. 한 번에 패키지 1개, 파일 5개 이내. `src/04-io-network-threads/study_190311/naver.html`은 읽지 않습니다. UTF-8이 아닌 파일은 UTF-8로 해석해 읽고, 불가능하면 무시합니다(10절).
 7. **소스가 진실**: 노드와 소스가 다르면 소스를 따르고, 그 사실을 답변에 밝히며 노드 갱신을 제안합니다. 자동 갱신은 하지 않습니다.
 8. **민감값 경계**: 소스의 민감값은 `<REDACTED_...>`로 치환되어 있습니다. 폐기된 학습용 값이므로 복원하거나 인용하지 않습니다.
-9. **GUIDE.md**(이 문서)는 노드를 만들거나 frontmatter를 고치거나 규약이 헷갈릴 때만 읽습니다. `discussion/`은 정리 논의 요청일 때만 읽습니다. git log는 다시 뽑지 않습니다(고정 사실은 CLAUDE.md·ROOT에 있습니다).
+9. **GUIDE.md**(이 문서)는 노드를 만들거나 frontmatter를 고치거나 규약이 헷갈릴 때만 읽습니다. `discussion/`은 정리 논의 요청일 때만 읽습니다. 패키지 정보는 INDEX, 학습 흐름은 ROOT에서 봅니다.
 10. **예산**: CLAUDE.md + ROOT + unit 1~2개 + INDEX 행 몇 줄 ≈ 4~6k 토큰(단원 1개면 4k 안팎, 2개면 6k 안팎)이 지식맵의 최대 부담입니다. 이 안에서 답이 안 나오면 소스를 직접 읽는 쪽으로 전환합니다.
 
 ## 9. Claude 쓰기 프로토콜
@@ -220,14 +220,26 @@ evidence:
     for p in $(grep -h '^  - src/' knowledge-map/units/*.md | sed 's/^  - //'); do [ -e "$p" ] || echo "missing: $p"; done
     ```
 
-## 10. 소유자 워크플로
+## 10. 소스 → Markdown 변환 규칙
+
+리포의 최종 목표는 Markdown만 남기는 것입니다([ROOT 현재 목표](./ROOT.md)). 소스는 아래 규칙으로 변환합니다.
+
+1. **단위는 주제(개념)입니다.** 패키지 1개 = 문서 1개가 아니라, 여러 패키지에 흩어진 같은 개념을 `topics/NN-slug.md` 하나로 묶습니다(`NN`은 소속 단원 번호). 예: `topics/02-interface-polymorphism.md`, `topics/04-socket-chat.md`, `topics/05-jdbc-resource-handling.md`.
+2. **같은 날 변형은 한 문서의 단계로 합칩니다.** `Mk2`/`_mk2`/`_room1` 같은 접미는 같은 날의 변형·후속 단계라는 뜻입니다. 예: study_190318 ~ study_190318_mk4는 소켓 채팅 1~4단계로 한 문서에 둡니다.
+3. **topic 문서 구성**(7절 topic 템플릿에 더해): `## 개념 요약` / `## 당시 코드 핵심 발췌`(짧게, UTF-8) / `## 당시 방식의 문제와 지금의 컨벤션`(실무 기준) / `## 출처`(원래 패키지명·날짜. 원본 코드는 git 이력).
+4. **인코딩은 UTF-8이 유일한 기준입니다.** UTF-8이 아닌 소스는 UTF-8로 변환하거나 해석해 읽고, 불가능하면(깨진 한글 등) 무시합니다.
+5. **진행은 단원(항목)별로, 소유자 지시가 있을 때만 합니다.** 한 번에 전체를 변환하지 않습니다.
+6. **순서**: topic 문서 작성 → 단원 본문·INDEX `변환` 열 갱신 → 소유자 확인 → 그 단원의 `src/NN-…/` 삭제 → 단원 `evidence`를 topic 문서로 교체.
+7. **`src/`에 남아 있는 것이 곧 아직 변환하지 않은 목록**입니다. INDEX의 `변환` 열은 `-`(미변환) 또는 변환된 topic 문서 링크를 적습니다.
+
+## 11. 소유자 워크플로
 
 - 노드를 읽고 맞으면 `status: confirmed`로 바꿔 주세요. 틀린 곳은 본문 그 자리에 `> fix: ...` 한 줄을 남기면 다음 세션에서 Claude가 반영하고 fix 줄을 지웁니다.
 - 새 단원: 7절 unit 템플릿 복사 → 다음 빈 번호 → ROOT 로드맵 표에 행 추가.
 - 단원이 150줄을 넘으면 `topics/`로 쪼갭니다.
 - 커밋 메시지 관례: `map: add unit 06-xxx`, `map: confirm 02-oop`, `map: stale 05-jdbc-libs`.
 
-## 11. 다른 리포로 옮기기
+## 12. 다른 리포로 옮기기
 
 - 복사하는 것: `GUIDE.md`, `ROOT.md` 골격, `INDEX.md`(선택), `units/`·`discussion/` 디렉토리, CLAUDE.md의 "지식맵" 절.
 - 바꾸는 것: `stack` 값, ROOT 내용, `units/` 내용.
@@ -235,7 +247,7 @@ evidence:
 - 리포 간 연결: `related`에 GitHub 절대 URL. 예: 이 리포의 05-jdbc-libs → Spring 리포의 데이터 접근 단원("학원 JDBC → 현업 JdbcTemplate/JPA").
 - 리포가 3개 이상이 되면 별도 리포에 ROOT 하나만 두고 각 리포의 ROOT.md를 URL로 가리킵니다. 기존 노드는 바꿀 필요 없습니다.
 
-## 12. 용어와 버전
+## 13. 용어와 버전
 
 | 한국어 | type | 위치 |
 |---|---|---|
