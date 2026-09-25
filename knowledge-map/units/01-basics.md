@@ -9,14 +9,14 @@ status: draft
 order: 1
 triggers: [기초, 변수, 연산자, 형변환, 배열, 정렬, for, while, scanner, random, 로또, 게임]
 evidence:
-  - src/01-basics/study_181217
-  - src/01-basics/study_181218
-  - src/02-oop/study_181219
-  - src/01-basics/study_181220
-  - src/01-basics/study_181221
-  - src/01-basics/study_190227
-  - src/01-basics/report_181226
-  - src/01-basics/report_190227
+  - legacy/01-basics/study_181217
+  - legacy/01-basics/study_181218
+  - legacy/02-oop/study_181219
+  - legacy/01-basics/study_181220
+  - legacy/01-basics/study_181221
+  - legacy/01-basics/study_190227
+  - legacy/01-basics/report_181226
+  - legacy/01-basics/report_190227
 related:
   - ./02-oop.md
 ---
@@ -37,14 +37,14 @@ related:
 ## 근거 패키지
 | 패키지 | 날짜 | 종류 | 무엇을 연습 | 주의 |
 |---|---|---|---|---|
-| [study_181217](../../src/01-basics/study_181217) | 2018-12-17 | study | Hello World | - |
-| [study_181218](../../src/01-basics/study_181218) | 2018-12-18 | study | 타입·변수·연산자·형변환·while·Scanner | Var1.java 주석 깨짐 |
-| [study_181219](../../src/02-oop/study_181219) | 2018-12-19 | study | (부) 배열·if-else·Scanner. 클래스 부분은 단원 02 | 주 단원 02 |
-| [study_181220](../../src/01-basics/study_181220) | 2018-12-20 | study | 조건문·반복문·별 찍기 | Test1~9 번호식 파일명 |
-| [study_181221](../../src/01-basics/study_181221) | 2018-12-21 | study | 배열·버블 정렬·Arrays.sort·로또 | Test5 빈 printstar() |
-| [report_181226](../../src/01-basics/report_181226) | 2018-12-26 | report | 로또 중복 없이 뽑아 정렬 | - |
-| [study_190227](../../src/01-basics/study_190227) | 2019-02-27 | study | 배열 복사·값 전달·equals·가위바위보 | 두 버전(GBBGame/GBBGame2) |
-| [report_190227](../../src/01-basics/report_190227) | 2019-02-27 | report | 야구 게임(static 상태·생성자) | 부 단원 02. 2인 팀 과제 |
+| [study_181217](../../legacy/01-basics/study_181217) | 2018-12-17 | study | Hello World | - |
+| [study_181218](../../legacy/01-basics/study_181218) | 2018-12-18 | study | 타입·변수·연산자·형변환·while·Scanner | Var1.java 주석 깨짐 |
+| [study_181219](../../legacy/02-oop/study_181219) | 2018-12-19 | study | (부) 배열·if-else·Scanner. 클래스 부분은 단원 02 | 주 단원 02 |
+| [study_181220](../../legacy/01-basics/study_181220) | 2018-12-20 | study | 조건문·반복문·별 찍기 | Test1~9 번호식 파일명 |
+| [study_181221](../../legacy/01-basics/study_181221) | 2018-12-21 | study | 배열·버블 정렬·Arrays.sort·로또 | Test5 빈 printstar() |
+| [report_181226](../../legacy/01-basics/report_181226) | 2018-12-26 | report | 로또 중복 없이 뽑아 정렬 | - |
+| [study_190227](../../legacy/01-basics/study_190227) | 2019-02-27 | study | 배열 복사·값 전달·equals·가위바위보 | 두 버전(GBBGame/GBBGame2) |
+| [report_190227](../../legacy/01-basics/report_190227) | 2019-02-27 | report | 야구 게임(static 상태·생성자) | 부 단원 02. 2인 팀 과제 |
 
 ## 주의점
 - `study_181218/Var1.java`는 UTF-8이지만 한글 주석·문자열이 '占쏙옙' 형태로 깨진 채 커밋되어 있습니다(복구 불가). 나머지는 대부분 MS949입니다.
