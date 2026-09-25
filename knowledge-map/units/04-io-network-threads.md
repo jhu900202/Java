@@ -9,13 +9,13 @@ status: draft
 order: 4
 triggers: [io, 스트림, stream, 파일, bufferedreader, urlconnection, thread, 스레드, runnable, socket, 소켓, 채팅]
 evidence:
-  - src/study_190311
-  - src/study_190315
-  - src/study_190318
-  - src/study_190318_mk2
-  - src/study_190318_mk3
-  - src/study_190318_mk4
-  - src/study_190313
+  - src/04-io-network-threads/study_190311
+  - src/04-io-network-threads/study_190315
+  - src/04-io-network-threads/study_190318
+  - src/04-io-network-threads/study_190318_mk2
+  - src/04-io-network-threads/study_190318_mk3
+  - src/04-io-network-threads/study_190318_mk4
+  - src/05-jdbc-libs/study_190313
 related:
   - ./05-jdbc-libs.md
 ---
@@ -43,18 +43,18 @@ mk3에서 ArrayList가 아니라 Vector를 쓴 이유(동기화)와 인터페이
 ## 근거 패키지
 | 패키지 | 날짜 | 종류 | 무엇을 연습 | 주의 |
 |---|---|---|---|---|
-| [study_190311](../../src/study_190311) | 2019-03-11 | study | 스트림·파일·URLConnection (7 java) | naver.html·test*.txt 덤프. D:/ 절대 경로 |
-| [study_190315](../../src/study_190315) | 2019-03-15 | study | 기초 스레드 | ThreadNotify 빈 골격 |
-| [study_190318](../../src/study_190318) | 2019-03-18 | study | 소켓 채팅 1단계 | - |
-| [study_190318_mk2](../../src/study_190318_mk2) | 2019-03-18 | study | 2단계 양방향 | 사설 IP 하드코딩 |
-| [study_190318_mk3](../../src/study_190318_mk3) | 2019-03-18 | study | 3단계 브로드캐스트 | 클라이언트 UTF-8 지정 |
-| [study_190318_mk4](../../src/study_190318_mk4) | 2019-03-18 | study | 4단계 프로토콜 | - |
-| [study_190313](../../src/study_190313) | 2019-03-13 | study | (부) URLConnection 입력부 | 주 단원 05 |
+| [study_190311](../../src/04-io-network-threads/study_190311) | 2019-03-11 | study | 스트림·파일·URLConnection (7 java) | naver.html·test*.txt 덤프. D:/ 절대 경로 |
+| [study_190315](../../src/04-io-network-threads/study_190315) | 2019-03-15 | study | 기초 스레드 | ThreadNotify 빈 골격 |
+| [study_190318](../../src/04-io-network-threads/study_190318) | 2019-03-18 | study | 소켓 채팅 1단계 | - |
+| [study_190318_mk2](../../src/04-io-network-threads/study_190318_mk2) | 2019-03-18 | study | 2단계 양방향 | 사설 IP 치환됨 |
+| [study_190318_mk3](../../src/04-io-network-threads/study_190318_mk3) | 2019-03-18 | study | 3단계 브로드캐스트 | 클라이언트 UTF-8 지정 |
+| [study_190318_mk4](../../src/04-io-network-threads/study_190318_mk4) | 2019-03-18 | study | 4단계 프로토콜 | - |
+| [study_190313](../../src/05-jdbc-libs/study_190313) | 2019-03-13 | study | (부) URLConnection 입력부 | 주 단원 05 |
 
 ## 주의점
-- `src/study_190311/naver.html`(169KB)과 `test.txt`/`test2.txt`는 실행 결과 덤프이며 읽지 않습니다.
+- `src/04-io-network-threads/study_190311/naver.html`(169KB)과 `test.txt`/`test2.txt`는 실행 결과 덤프이며 읽지 않습니다.
 - study_190311 소스에 `D:/workspace/...` 절대 경로가 하드코딩되어 있어 그대로 실행되지 않습니다.
-- `study_190318_mk2/SocketClient.java`에 사설 IP가 하드코딩되어 있습니다(값은 적지 않습니다).
+- `study_190318_mk2/SocketClient.java`의 접속 호스트는 `<REDACTED_HOST>`로 치환되어 있습니다.
 - `study_190315/ThreadNotify.java`는 main과 run이 모두 빈 골격입니다(wait/notify 미완성).
 - try-with-resources는 근거가 없고 모두 try-finally 또는 미해제입니다.
 

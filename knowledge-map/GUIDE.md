@@ -73,8 +73,8 @@ order: 2                     # (필수: unit/topic) 커리큘럼 순서. ROOT �
 triggers: [class, 클래스, 생성자, this, static, 상속, inheritance, interface, 다형성, override, 캐스팅, 접근지정자]
                              # (필수: unit/topic) 질문 키워드 매칭용. 한/영 혼용, 소문자, 12개 이내
 evidence:                    # (선택) 근거 경로. 리포 루트 기준, 디렉토리 또는 파일. glob 금지, 실제 존재하는 경로만
-  - src/study_190215
-  - src/report_190221
+  - src/02-oop/study_190215
+  - src/02-oop/report_190221
 related:                     # (선택) 교차 참조 노드 상대 경로. Claude는 필요할 때만 1홉
   - ./01-basics.md
 last_reviewed: null          # (선택) 소유자가 "복습했다"고 명시할 때만 갱신. Claude 자동 갱신 금지
@@ -103,7 +103,7 @@ next_action: null            # (선택) 다음에 볼 것 한 줄. 위와 같은
 ## 6. 링크
 
 - 문법은 표준 Markdown 상대 링크만 씁니다. `[객체지향](./units/02-oop.md)`, `[ROOT](../ROOT.md)`. 위키링크(`[[...]]`)는 GitHub에서 렌더링되지 않으므로 쓰지 않습니다.
-- 소스 링크: frontmatter `evidence`에는 리포 루트 기준 경로(`src/study_190215`), 본문에서는 그 파일 기준 상대 링크(`units/`에서는 `[src/study_190215](../../src/study_190215)`). 줄 번호 앵커(`#L12`)는 쓰지 않고 "12행 부근"처럼 본문에 적습니다.
+- 소스 링크: frontmatter `evidence`에는 리포 루트 기준 경로(`src/02-oop/study_190215`), 본문에서는 그 파일 기준 상대 링크(`units/`에서는 `[src/02-oop/study_190215](../../src/02-oop/study_190215)`). 줄 번호 앵커(`#L12`)는 쓰지 않고 "12행 부근"처럼 본문에 적습니다.
 - 관계의 의미:
   - `parent`(frontmatter, 정확히 1개): 위로 가는 링크. 트리 깊이 최대 3(ROOT → unit → topic/evidence).
   - `children` 키는 없습니다. 부모 본문의 표가 자식 목록의 단일 진실입니다. ROOT의 "학습 로드맵" 표 = unit 목록, unit의 "세부 주제·근거 노트" 목록 = topic/evidence 목록.
@@ -127,7 +127,7 @@ status: draft
 order: <N>
 triggers: [<12개 이내>]
 evidence:
-  - src/<패키지>
+  - src/<NN-단원>/<패키지>
 related:
   - ./<다른 단원>.md
 ---
@@ -175,7 +175,7 @@ stack: java
 parent: ../units/<NN-slug>.md
 status: draft
 evidence:
-  - src/<패키지명>
+  - src/<NN-단원>/<패키지명>
 ---
 
 # <패키지명>
@@ -199,9 +199,9 @@ evidence:
 3. **단원 선택**: ROOT 로드맵 표의 `triggers`·`summary`와 질문 키워드를 대조해 unit **1개**를 고릅니다. 경계가 겹치면(예: StringBuilder는 02와 03, URLConnection은 04와 05) 최대 2개. `units/` 전체를 읽지 않습니다.
 4. **매칭 실패 폴백**: (a) 패키지명·테마 이름("StarCraft", "라면")이 보이면 `grep -n "<키워드>" knowledge-map/INDEX.md`로 행을 찾아 주 단원을 엽니다. (b) 그래도 없으면 소유자에게 되묻습니다. 어떤 경우에도 `units/`·`src/` 전체 나열로 대체하지 않습니다.
 5. **패키지명 질문**("study_190318_mk3이 뭐였죠?"): ROOT를 열지 않고 `grep -n "<패키지명>" knowledge-map/INDEX.md`로 해당 행만 읽습니다. 한 줄 요약으로 답이 되면 거기서 멈추고, 부족할 때만 그 행의 주 단원을 엽니다.
-6. **소스 진입**: unit의 `evidence` 경로에서 시작합니다. 한 번에 패키지 1개, 파일 5개 이내. `src/study_190311/naver.html`, `**/*.jar`, `SMSlib/`는 읽지 않습니다. MS949 파일은 `iconv -f CP949 -t UTF-8 <파일>`로 읽고 재저장하지 않습니다.
+6. **소스 진입**: unit의 `evidence` 경로에서 시작합니다. 한 번에 패키지 1개, 파일 5개 이내. `src/04-io-network-threads/study_190311/naver.html`과 `libs/`는 읽지 않습니다. MS949 파일은 `iconv -f CP949 -t UTF-8 <파일>`로 읽고 재저장하지 않습니다.
 7. **소스가 진실**: 노드와 소스가 다르면 소스를 따르고, 그 사실을 답변에 밝히며 노드 갱신을 제안합니다. 자동 갱신은 하지 않습니다.
-8. **민감값 경계**: 허용 — "`study_190308_mk3/ExampleSend.java`에 SMS API 키·시크릿과 전화번호가 하드코딩되어 있습니다." 금지 — 그 키 문자열·번호·계정·IP를 인용하는 것. 파일 경로와 종류까지만 적습니다.
+8. **민감값 경계**: 소스의 민감값은 `<REDACTED_...>`로 치환되어 있습니다. git 이력에서 옛 값(키 문자열·번호·계정·IP)을 보더라도 인용하지 않고, 파일 경로와 종류까지만 적습니다.
 9. **GUIDE.md**(이 문서)는 노드를 만들거나 frontmatter를 고치거나 규약이 헷갈릴 때만 읽습니다. `discussion/`은 정리 논의 요청일 때만 읽습니다. git log는 다시 뽑지 않습니다(고정 사실은 CLAUDE.md·ROOT에 있습니다).
 10. **예산**: CLAUDE.md + ROOT + unit 1~2개 + INDEX 행 몇 줄 ≈ 4~6k 토큰(단원 1개면 4k 안팎, 2개면 6k 안팎)이 지식맵의 최대 부담입니다. 이 안에서 답이 안 나오면 소스를 직접 읽는 쪽으로 전환합니다.
 
@@ -217,7 +217,7 @@ evidence:
 18. **검증(수동)**: 노드를 만들거나 고친 뒤 답변에 보고합니다. (1) 필수 키 존재, (2) `parent` 경로 유효, (3) 부모 표에 행 있음, (4) `evidence` 경로 실제 존재, (5) triggers 12개 이하.
     ```bash
     grep -L '^id:' knowledge-map/units/*.md                       # id 없는 파일
-    for p in $(grep -h '^  - src/\|^  - SMSlib' knowledge-map/units/*.md | sed 's/^  - //'); do [ -e "$p" ] || echo "missing: $p"; done
+    for p in $(grep -h '^  - src/\|^  - libs' knowledge-map/units/*.md | sed 's/^  - //'); do [ -e "$p" ] || echo "missing: $p"; done
     ```
 
 ## 10. 소유자 워크플로

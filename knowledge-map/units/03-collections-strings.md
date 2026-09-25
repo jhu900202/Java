@@ -9,13 +9,13 @@ status: draft
 order: 3
 triggers: [컬렉션, arraylist, hashmap, vector, 제네릭, generic, 문자열, split, tokenizer, parseint, stringbuilder, json]
 evidence:
-  - src/study_190312
-  - src/study_190312_mk2
-  - src/report_190308
-  - src/study_190306
-  - src/study_190308
-  - src/study_190308_mk2
-  - src/study_190308_mk4
+  - src/03-collections-strings/study_190312
+  - src/03-collections-strings/study_190312_mk2
+  - src/03-collections-strings/report_190308
+  - src/02-oop/study_190306
+  - src/02-oop/study_190308
+  - src/02-oop/study_190308_mk2
+  - src/02-oop/study_190308_mk4
 related:
   - ./02-oop.md
   - ./05-jdbc-libs.md
@@ -40,13 +40,13 @@ Set, Iterator, Comparator/Comparable, Stream API, try-with-resources는 근거�
 ## 근거 패키지
 | 패키지 | 날짜 | 종류 | 무엇을 연습 | 주의 |
 |---|---|---|---|---|
-| [report_190308](../../src/report_190308) | 2019-03-08 | report | JSON 형태 문자열 파싱 | 주석 처리된 substring 대안 |
-| [study_190312](../../src/study_190312) | 2019-03-12 | study | URL 파라미터 파싱 협업 과제 | JUnit import 후 main 직접 호출 |
-| [study_190312_mk2](../../src/study_190312_mk2) | 2019-03-12 | study | 제네릭·ArrayList/Vector/HashMap | GenerixEx04 main 비어 있음 |
-| [study_190306](../../src/study_190306) | 2019-03-06 | study | (부) List로 주문 목록 | 주 단원 02 |
-| [study_190308](../../src/study_190308) | 2019-03-08 | study | (부) ArrayList\<Humen\> 다형 호출 | 주 단원 02 |
-| [study_190308_mk2](../../src/study_190308_mk2) | 2019-03-08 | study | (부) 리스트 요소 다운캐스팅 | 주 단원 02 |
-| [study_190308_mk4](../../src/study_190308_mk4) | 2019-03-08 | study | (부) StringBuilder·parseInt | 주 단원 02 |
+| [report_190308](../../src/03-collections-strings/report_190308) | 2019-03-08 | report | JSON 형태 문자열 파싱 | 주석 처리된 substring 대안 |
+| [study_190312](../../src/03-collections-strings/study_190312) | 2019-03-12 | study | URL 파라미터 파싱 협업 과제 | JUnit import 후 main 직접 호출 |
+| [study_190312_mk2](../../src/03-collections-strings/study_190312_mk2) | 2019-03-12 | study | 제네릭·ArrayList/Vector/HashMap | GenerixEx04 main 비어 있음 |
+| [study_190306](../../src/02-oop/study_190306) | 2019-03-06 | study | (부) List로 주문 목록 | 주 단원 02 |
+| [study_190308](../../src/02-oop/study_190308) | 2019-03-08 | study | (부) ArrayList\<Humen\> 다형 호출 | 주 단원 02 |
+| [study_190308_mk2](../../src/02-oop/study_190308_mk2) | 2019-03-08 | study | (부) 리스트 요소 다운캐스팅 | 주 단원 02 |
+| [study_190308_mk4](../../src/02-oop/study_190308_mk4) | 2019-03-08 | study | (부) StringBuilder·parseInt | 주 단원 02 |
 
 ## 주의점
 - 파일명 오타 혼재: GenericEx01~02 / GenerixEx03~05. GenerixEx04는 main이 비어 있는 미완성 예제입니다.

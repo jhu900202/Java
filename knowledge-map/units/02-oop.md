@@ -9,23 +9,23 @@ status: draft
 order: 2
 triggers: [class, 클래스, 생성자, this, static, 상속, inheritance, interface, 다형성, override, 캐스팅, 접근지정자]
 evidence:
-  - src/study_181219
-  - src/study_190215
-  - src/study_190215Mk2
-  - src/study_190220
-  - src/study_190220Mk2
-  - src/study_190220Mk3
-  - src/study_190305
-  - src/study_190306
-  - src/study_190306_room1
-  - src/study_190306_room2
-  - src/study_190308
-  - src/study_190308_mk2
-  - src/study_190308_mk4
-  - src/study_190425
-  - src/report_190220
-  - src/report_190221
-  - src/report_190227
+  - src/02-oop/study_181219
+  - src/02-oop/study_190215
+  - src/02-oop/study_190215Mk2
+  - src/02-oop/study_190220
+  - src/02-oop/study_190220Mk2
+  - src/02-oop/study_190220Mk3
+  - src/02-oop/study_190305
+  - src/02-oop/study_190306
+  - src/02-oop/study_190306_room1
+  - src/02-oop/study_190306_room2
+  - src/02-oop/study_190308
+  - src/02-oop/study_190308_mk2
+  - src/02-oop/study_190308_mk4
+  - src/02-oop/study_190425
+  - src/02-oop/report_190220
+  - src/02-oop/report_190221
+  - src/01-basics/report_190227
 related:
   - ./01-basics.md
   - ./03-collections-strings.md
@@ -53,23 +53,23 @@ related:
 ## 근거 패키지
 | 패키지 | 날짜 | 종류 | 무엇을 연습 | 주의 |
 |---|---|---|---|---|
-| [study_181219](../../src/study_181219) | 2018-12-19 | study | 클래스·생성자·필드·new | 부 단원 01 |
-| [study_190215](../../src/study_190215) | 2019-02-15 | study | 매개변수 생성자·this (LoL) | Champ.java만 UTF-8 |
-| [study_190215Mk2](../../src/study_190215Mk2) | 2019-02-15 | study | Gateway 팩토리·오버로딩 (StarCraft) | 명명 규칙 주석 |
-| [study_190220](../../src/study_190220) | 2019-02-20 | study | 유닛 클래스·Gateway·오버로딩 | - |
-| [study_190220Mk2](../../src/study_190220Mk2) | 2019-02-20 | study | Animal 인터페이스 다형성 | study_190305 Ex02App과 중복 |
-| [study_190220Mk3](../../src/study_190220Mk3) | 2019-02-20 | study | Lamun 인터페이스 (Mk2 동일 패턴) | - |
-| [report_190220](../../src/report_190220) | 2019-02-20 | report | 지역/static/instance 변수·return | 한 파일 3클래스 |
-| [report_190221](../../src/report_190221) | 2019-02-21 | report | 인터페이스→추상→구체 3단 계층 (12파일) | 주석 없음 |
-| [study_190305](../../src/study_190305) | 2019-03-05 | study | 접근지정자·getter·합성·생성자 오버로딩 | 한 파일 다중 클래스 |
-| [study_190306](../../src/study_190306) | 2019-03-06 | study | 객체 협력·업캐스팅 (CafeApp) | 부 단원 03. 한 파일 6클래스(CafeApp 포함) |
-| [study_190306_room1](../../src/study_190306_room1) | 2019-03-06 | study | private/default 접근 (같은 패키지) | room2와 한 쌍 |
-| [study_190306_room2](../../src/study_190306_room2) | 2019-03-06 | study | 다른 패키지에서 default 접근 불가 | room1 의존 |
-| [study_190308](../../src/study_190308) | 2019-03-08 | study | 상속 오버라이딩·ArrayList\<인터페이스\> | 부 단원 03. Humen/Enermy 오타 |
-| [study_190308_mk2](../../src/study_190308_mk2) | 2019-03-08 | study | 다운캐스팅 + try-catch | 부 단원 03 |
-| [study_190308_mk4](../../src/study_190308_mk4) | 2019-03-08 | study | toString/hashCode·StringBuilder | 부 단원 03 |
-| [study_190425](../../src/study_190425) | 2019-04-25 | study | super vs this 오버라이딩 | 마지막 패키지 |
-| [report_190227](../../src/report_190227) | 2019-02-27 | report | (부) static 상태 관리·생성자 (야구 3라운드) | 주 단원 01. 2인 팀 과제 |
+| [study_181219](../../src/02-oop/study_181219) | 2018-12-19 | study | 클래스·생성자·필드·new | 부 단원 01 |
+| [study_190215](../../src/02-oop/study_190215) | 2019-02-15 | study | 매개변수 생성자·this (LoL) | Champ.java만 UTF-8 |
+| [study_190215Mk2](../../src/02-oop/study_190215Mk2) | 2019-02-15 | study | Gateway 팩토리·오버로딩 (StarCraft) | 명명 규칙 주석 |
+| [study_190220](../../src/02-oop/study_190220) | 2019-02-20 | study | 유닛 클래스·Gateway·오버로딩 | - |
+| [study_190220Mk2](../../src/02-oop/study_190220Mk2) | 2019-02-20 | study | Animal 인터페이스 다형성 | study_190305 Ex02App과 중복 |
+| [study_190220Mk3](../../src/02-oop/study_190220Mk3) | 2019-02-20 | study | Lamun 인터페이스 (Mk2 동일 패턴) | - |
+| [report_190220](../../src/02-oop/report_190220) | 2019-02-20 | report | 지역/static/instance 변수·return | 한 파일 3클래스 |
+| [report_190221](../../src/02-oop/report_190221) | 2019-02-21 | report | 인터페이스→추상→구체 3단 계층 (12파일) | 주석 없음 |
+| [study_190305](../../src/02-oop/study_190305) | 2019-03-05 | study | 접근지정자·getter·합성·생성자 오버로딩 | 한 파일 다중 클래스 |
+| [study_190306](../../src/02-oop/study_190306) | 2019-03-06 | study | 객체 협력·업캐스팅 (CafeApp) | 부 단원 03. 한 파일 6클래스(CafeApp 포함) |
+| [study_190306_room1](../../src/02-oop/study_190306_room1) | 2019-03-06 | study | private/default 접근 (같은 패키지) | room2와 한 쌍 |
+| [study_190306_room2](../../src/02-oop/study_190306_room2) | 2019-03-06 | study | 다른 패키지에서 default 접근 불가 | room1 의존 |
+| [study_190308](../../src/02-oop/study_190308) | 2019-03-08 | study | 상속 오버라이딩·ArrayList\<인터페이스\> | 부 단원 03. Humen/Enermy 오타 |
+| [study_190308_mk2](../../src/02-oop/study_190308_mk2) | 2019-03-08 | study | 다운캐스팅 + try-catch | 부 단원 03 |
+| [study_190308_mk4](../../src/02-oop/study_190308_mk4) | 2019-03-08 | study | toString/hashCode·StringBuilder | 부 단원 03 |
+| [study_190425](../../src/02-oop/study_190425) | 2019-04-25 | study | super vs this 오버라이딩 | 마지막 패키지 |
+| [report_190227](../../src/01-basics/report_190227) | 2019-02-27 | report | (부) static 상태 관리·생성자 (야구 3라운드) | 주 단원 01. 2인 팀 과제 |
 
 ## 주의점
 - 클래스명 오타: Humen, Enermy(study_190308, mk2에서 재사용). 파일명은 Class404OR / Class404DC라 클래스명으로 파일을 찾을 수 없습니다.

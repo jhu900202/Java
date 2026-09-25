@@ -10,7 +10,7 @@ convention: 1
 # 자바 학습 로드맵
 
 ## 이 저장소는 무엇인가
-- 2018-12 ~ 2019-04 학원 수료 과정의 수업 실습(`src/study_YYMMDD[변형]`)과 과제(`src/report_YYMMDD`)입니다. 현업 시작 전 기록이며 소스는 당시 상태 그대로 보존합니다(수정하지 않음).
+- 2018-12 ~ 2019-04 학원 수료 과정의 수업 실습(`study_YYMMDD[변형]`)과 과제(`report_YYMMDD`)입니다. 현업 시작 전 기록이며, 패키지는 `src/<NN-단원>/` 아래에 단원별로 모여 있습니다. 최종적으로는 Markdown만 남길 예정입니다.
 - 소유자는 현재 Java/Spring + JS/React 개발자입니다. 이 지식맵은 과거 코드를 빨리 찾고, 기초를 복습하고, 리포 정리를 논의하기 위한 것입니다.
 
 ## 사용법 요약
@@ -35,8 +35,8 @@ convention: 1
 
 ## 저장소 주의사항
 - 인코딩 혼재: MS949 85 / ASCII 40 / UTF-8 9 / 기타 1. `study_181218/Var1.java`는 이미 깨진 채 커밋됨.
-- 하드코딩된 민감값이 있는 패키지: study_190304·190313·190328(DB 접속 정보), study_190308_mk3(SMS API 키·시크릿·전화번호), study_190318_mk2(사설 IP). 값은 어디에도 옮기지 않습니다.
-- 바이너리·덤프: `src/study_190304/ojdbc6.jar`(2.1MB), `SMSlib/*.jar`, `src/study_190311/naver.html`(169KB), `test*.txt`.
+- 민감값(DB 접속 정보, SMS API 키·전화번호, 사설 IP)은 소스에서 `<REDACTED_...>`로 치환함. 옛 값은 git 이력에만 남아 있으며 어디에도 옮기지 않습니다.
+- 바이너리·덤프: `libs/*.jar`(4개), `src/04-io-network-threads/study_190311/naver.html`(169KB)·`test*.txt`.
 - 빌드·실행하지 않는 아카이브입니다(빌드 설정 없음). 컴파일·실행을 시도하지 않음.
 - 미완성·오타 파일: ThreadNotify(빈 골격), GenerixEx04(main 비어 있음), Humen/Enermy, score.java 대소문자. 자세한 것은 각 단원의 "주의점".
 
@@ -44,4 +44,5 @@ convention: 1
 - [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 진행 중(용도 결정: 지식 아카이브). 다음 액션: "소유자에게 묻는 질문" 3번부터.
 
 ## 갱신 기록 (최근 10건)
+- 2026-09-25: 소스를 단원별 디렉토리로 이관, jar를 `libs/`로 이동, 민감값 치환.
 - 2026-09-25: 지식맵 생성(루트 + 단원 5 + INDEX + discussion 1). 모든 단원 status draft.
