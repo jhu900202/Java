@@ -41,7 +41,7 @@ convention: 1
 - 미완성·오타 파일: ThreadNotify(빈 골격), GenerixEx04(main 비어 있음), Humen/Enermy, score.java 대소문자. 자세한 것은 각 단원의 "주의점".
 
 ## 열린 논의
-- [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 진행 중(용도 결정: 지식 아카이브). 다음 액션: "소유자에게 묻는 질문" 2번부터.
+- [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 진행 중(용도 결정: 지식 아카이브). 다음 액션: "소유자에게 묻는 질문" 3번부터.
 
 ## 갱신 기록 (최근 10건)
 - 2026-09-25: 지식맵 생성(루트 + 단원 5 + INDEX + discussion 1). 모든 단원 status draft.
