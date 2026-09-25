@@ -31,7 +31,7 @@ parent: ./ROOT.md
 | report_190221 | 2019-02-21 | report | 02 | - | StarCraft 인터페이스 → 종족 추상 클래스 → 유닛 구체 클래스 3단 계층. 인터페이스 타입 파라미터로 전투/출력 (12파일) | 주석 없음, StartApp 제외 ASCII |
 | study_190227 | 2019-02-27 | study | 01 | - | 배열 복사·병합·값 전달·String ==/equals·가위바위보 | GBBGame/GBBGame2 두 버전, MS949 |
 | report_190227 | 2019-02-27 | report | 01 | 02 | Scanner/Random 3라운드 야구 게임. static 상태 관리·생성자 (2인 팀 과제) | score.java vs class Score 대소문자 불일치 |
-| study_190304 | 2019-03-04 | study | 05 | - | Oracle 샘플 스키마 emp 테이블 JDBC SELECT/INSERT. PreparedStatement/ResultSet, finally 자원 해제 | ojdbc6.jar는 `libs/`로 이동. DB 접속 정보 치환됨 |
+| study_190304 | 2019-03-04 | study | 05 | - | Oracle 샘플 스키마 emp 테이블 JDBC SELECT/INSERT. PreparedStatement/ResultSet, finally 자원 해제 | ojdbc6.jar 삭제됨. DB 접속 정보 치환됨 |
 | study_190305 | 2019-03-05 | study | 02 | - | Menu 인터페이스·버거/콜라/감자 세트 합성·접근지정자·생성자 오버로딩·getter·필드 은닉 | Manager/Ex02App 한 파일 다중 클래스 |
 | study_190306 | 2019-03-06 | study | 02 | 03 | 카페 주문 흐름(Customer/Barista/Menu/MenuItem/Coffee) 협력·List·다단계 업캐스팅 | CafeApp 한 파일 6클래스(CafeApp 포함) |
 | study_190306_room1 | 2019-03-06 | study | 02 | - | private / default 접근 범위(같은 패키지) | room2와 한 쌍 |
@@ -39,7 +39,7 @@ parent: ./ROOT.md
 | study_190308 | 2019-03-08 | study | 02 | 03 | People 상속 오버라이딩, ArrayList\<Humen\> 다형 호출 | Humen/Enermy 오타(mk2에서 재사용). 파일명 Class404OR |
 | report_190308 | 2019-03-08 | report | 03 | - | JSON 형태 문자열 split/replace/parseInt 파싱 | 주석 처리된 substring 대안 |
 | study_190308_mk2 | 2019-03-08 | study | 02 | 03 | 인터페이스 타입 리스트 요소 다운캐스팅 + try-catch | study_190308 재작성 변형. 파일명 Class404DC |
-| study_190308_mk3 | 2019-03-08 | study | 05 | - | Coolsms(nurigo) SDK + json-simple로 SMS 발송 | API 키·시크릿·전화번호 치환됨. `libs/` jar 의존 |
+| study_190308_mk3 | 2019-03-08 | study | 05 | - | Coolsms(nurigo) SDK + json-simple로 SMS 발송 | API 키·시크릿·전화번호 치환됨. SDK jar 삭제됨 |
 | study_190308_mk4 | 2019-03-08 | study | 02 | 03 | Object.toString 오버라이딩·StringBuilder·parseInt·hashCode | - |
 | study_190311 | 2019-03-11 | study | 04 | - | 표준 입력/파일 입출력 스트림(바이트·문자·버퍼)·FileWriter/PrintWriter·URLConnection 웹 저장 (7 java) | naver.html 169KB·test*.txt 포함. D:/workspace 절대 경로 |
 | study_190312 | 2019-03-12 | study | 03 | - | 네이버 뉴스 URL 파라미터 split/StringTokenizer/parseInt 파싱 협업 과제 | JUnit import 후 main 직접 호출. UTF-8/MS949 혼재 |
@@ -53,4 +53,4 @@ parent: ./ROOT.md
 | study_190328 | 2019-03-28 | study | 05 | - | Class.forName/DriverManager/Statement/ResultSet. book·customer 조회, Scanner LIKE 검색 | 소문자 클래스명(booklist, name). DB 접속 정보 치환됨. 문자열 연결 LIKE |
 | study_190425 | 2019-04-25 | study | 02 | - | Shape/Circle draw() 오버라이딩. super.draw() vs this.draw() | 2파일, ASCII. 마지막 패키지 |
 
-소스 외: `libs/`(javaSDK-2.2.jar, json-simple-1.1.1.jar, jsoup-1.11.3.jar, ojdbc6.jar) → 단원 05. git 이력에만 있는 `src/private_190313/`(이미지·개인 게임, 삭제됨)은 색인하지 않습니다.
+외부 jar(javaSDK-2.2, json-simple-1.1.1, jsoup-1.11.3, ojdbc6)는 삭제되어 리포에 없습니다. git 이력에만 있는 `src/private_190313/`(이미지·개인 게임, 삭제됨)은 색인하지 않습니다.

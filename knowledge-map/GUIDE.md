@@ -199,9 +199,9 @@ evidence:
 3. **단원 선택**: ROOT 로드맵 표의 `triggers`·`summary`와 질문 키워드를 대조해 unit **1개**를 고릅니다. 경계가 겹치면(예: StringBuilder는 02와 03, URLConnection은 04와 05) 최대 2개. `units/` 전체를 읽지 않습니다.
 4. **매칭 실패 폴백**: (a) 패키지명·테마 이름("StarCraft", "라면")이 보이면 `grep -n "<키워드>" knowledge-map/INDEX.md`로 행을 찾아 주 단원을 엽니다. (b) 그래도 없으면 소유자에게 되묻습니다. 어떤 경우에도 `units/`·`src/` 전체 나열로 대체하지 않습니다.
 5. **패키지명 질문**("study_190318_mk3이 뭐였죠?"): ROOT를 열지 않고 `grep -n "<패키지명>" knowledge-map/INDEX.md`로 해당 행만 읽습니다. 한 줄 요약으로 답이 되면 거기서 멈추고, 부족할 때만 그 행의 주 단원을 엽니다.
-6. **소스 진입**: unit의 `evidence` 경로에서 시작합니다. 한 번에 패키지 1개, 파일 5개 이내. `src/04-io-network-threads/study_190311/naver.html`과 `libs/`는 읽지 않습니다. MS949 파일은 `iconv -f CP949 -t UTF-8 <파일>`로 읽고 재저장하지 않습니다.
+6. **소스 진입**: unit의 `evidence` 경로에서 시작합니다. 한 번에 패키지 1개, 파일 5개 이내. `src/04-io-network-threads/study_190311/naver.html`은 읽지 않습니다. MS949 파일은 `iconv -f CP949 -t UTF-8 <파일>`로 읽고 재저장하지 않습니다.
 7. **소스가 진실**: 노드와 소스가 다르면 소스를 따르고, 그 사실을 답변에 밝히며 노드 갱신을 제안합니다. 자동 갱신은 하지 않습니다.
-8. **민감값 경계**: 소스의 민감값은 `<REDACTED_...>`로 치환되어 있습니다. git 이력에서 옛 값(키 문자열·번호·계정·IP)을 보더라도 인용하지 않고, 파일 경로와 종류까지만 적습니다.
+8. **민감값 경계**: 소스의 민감값은 `<REDACTED_...>`로 치환되어 있습니다. 폐기된 학습용 값이므로 복원하거나 인용하지 않습니다.
 9. **GUIDE.md**(이 문서)는 노드를 만들거나 frontmatter를 고치거나 규약이 헷갈릴 때만 읽습니다. `discussion/`은 정리 논의 요청일 때만 읽습니다. git log는 다시 뽑지 않습니다(고정 사실은 CLAUDE.md·ROOT에 있습니다).
 10. **예산**: CLAUDE.md + ROOT + unit 1~2개 + INDEX 행 몇 줄 ≈ 4~6k 토큰(단원 1개면 4k 안팎, 2개면 6k 안팎)이 지식맵의 최대 부담입니다. 이 안에서 답이 안 나오면 소스를 직접 읽는 쪽으로 전환합니다.
 
@@ -217,7 +217,7 @@ evidence:
 18. **검증(수동)**: 노드를 만들거나 고친 뒤 답변에 보고합니다. (1) 필수 키 존재, (2) `parent` 경로 유효, (3) 부모 표에 행 있음, (4) `evidence` 경로 실제 존재, (5) triggers 12개 이하.
     ```bash
     grep -L '^id:' knowledge-map/units/*.md                       # id 없는 파일
-    for p in $(grep -h '^  - src/\|^  - libs' knowledge-map/units/*.md | sed 's/^  - //'); do [ -e "$p" ] || echo "missing: $p"; done
+    for p in $(grep -h '^  - src/' knowledge-map/units/*.md | sed 's/^  - //'); do [ -e "$p" ] || echo "missing: $p"; done
     ```
 
 ## 10. 소유자 워크플로

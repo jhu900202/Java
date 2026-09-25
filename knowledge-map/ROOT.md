@@ -35,14 +35,15 @@ convention: 1
 
 ## 저장소 주의사항
 - 인코딩 혼재: MS949 85 / ASCII 40 / UTF-8 9 / 기타 1. `study_181218/Var1.java`는 이미 깨진 채 커밋됨.
-- 민감값(DB 접속 정보, SMS API 키·전화번호, 사설 IP)은 소스에서 `<REDACTED_...>`로 치환함. 옛 값은 git 이력에만 남아 있으며 어디에도 옮기지 않습니다.
-- 바이너리·덤프: `libs/*.jar`(4개), `src/04-io-network-threads/study_190311/naver.html`(169KB)·`test*.txt`.
+- 민감값(DB 접속 정보, SMS API 키·전화번호, 사설 IP)은 소스에서 `<REDACTED_...>`로 치환함. 폐기된 학습용 값이라 복원하지 않습니다.
+- 덤프: `src/04-io-network-threads/study_190311/naver.html`(169KB)·`test*.txt`. jar는 삭제함.
 - 빌드·실행하지 않는 아카이브입니다(빌드 설정 없음). 컴파일·실행을 시도하지 않음.
 - 미완성·오타 파일: ThreadNotify(빈 골격), GenerixEx04(main 비어 있음), Humen/Enermy, score.java 대소문자. 자세한 것은 각 단원의 "주의점".
 
 ## 열린 논의
-- [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 진행 중(용도 결정: 지식 아카이브). 다음 액션: "소유자에게 묻는 질문" 3번부터.
+- [리포 정리 논의](./discussion/repo-reorg.md) — 상태: 진행 중(용도 결정: 지식 아카이브). 다음 액션: 소스 → Markdown 전환 방식 결정("후속 작업" 참고).
 
 ## 갱신 기록 (최근 10건)
+- 2026-09-25: jar(`libs/`) 삭제.
 - 2026-09-25: 소스를 단원별 디렉토리로 이관, jar를 `libs/`로 이동, 민감값 치환.
 - 2026-09-25: 지식맵 생성(루트 + 단원 5 + INDEX + discussion 1). 모든 단원 status draft.
