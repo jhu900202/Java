@@ -2,7 +2,7 @@
 id: unit.io-network-threads
 type: unit
 title: 입출력 스트림 · 스레드 · 소켓 채팅
-summary: 바이트/문자/버퍼 스트림·파일·URLConnection·Thread/Runnable·소켓 채팅 단방향→양방향→브로드캐스트→프로토콜(mk1~mk4).
+summary: 바이트/문자/버퍼 스트림·파일·URLConnection·Thread/Runnable·소켓 채팅 mk1~mk4
 stack: java
 parent: ../ROOT.md
 status: draft

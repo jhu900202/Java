@@ -2,7 +2,7 @@
 id: unit.oop
 type: unit
 title: 객체지향 (class · static · inheritance · interface · polymorphism)
-summary: 클래스·생성자·static·상속·인터페이스·다형성·접근지정자·캐스팅. StarCraft/LoL/동물/라면/카페 테마 예제 다수.
+summary: 클래스·생성자·static·상속·인터페이스·다형성·접근지정자·캐스팅. StarCraft/LoL/동물/라면/카페 테마
 stack: java
 parent: ../ROOT.md
 status: draft
@@ -25,6 +25,7 @@ evidence:
   - src/study_190425
   - src/report_190220
   - src/report_190221
+  - src/report_190227
 related:
   - ./01-basics.md
   - ./03-collections-strings.md
@@ -61,20 +62,21 @@ related:
 | [report_190220](../../src/report_190220) | 2019-02-20 | report | 지역/static/instance 변수·return | 한 파일 3클래스 |
 | [report_190221](../../src/report_190221) | 2019-02-21 | report | 인터페이스→추상→구체 3단 계층 (12파일) | 주석 없음 |
 | [study_190305](../../src/study_190305) | 2019-03-05 | study | 접근지정자·getter·합성·생성자 오버로딩 | 한 파일 다중 클래스 |
-| [study_190306](../../src/study_190306) | 2019-03-06 | study | 객체 협력·업캐스팅 (CafeApp) | 부 단원 03. 한 파일 5클래스 |
+| [study_190306](../../src/study_190306) | 2019-03-06 | study | 객체 협력·업캐스팅 (CafeApp) | 부 단원 03. 한 파일 6클래스(CafeApp 포함) |
 | [study_190306_room1](../../src/study_190306_room1) | 2019-03-06 | study | private/default 접근 (같은 패키지) | room2와 한 쌍 |
 | [study_190306_room2](../../src/study_190306_room2) | 2019-03-06 | study | 다른 패키지에서 default 접근 불가 | room1 의존 |
 | [study_190308](../../src/study_190308) | 2019-03-08 | study | 상속 오버라이딩·ArrayList\<인터페이스\> | 부 단원 03. Humen/Enermy 오타 |
 | [study_190308_mk2](../../src/study_190308_mk2) | 2019-03-08 | study | 다운캐스팅 + try-catch | 부 단원 03 |
 | [study_190308_mk4](../../src/study_190308_mk4) | 2019-03-08 | study | toString/hashCode·StringBuilder | 부 단원 03 |
 | [study_190425](../../src/study_190425) | 2019-04-25 | study | super vs this 오버라이딩 | 마지막 패키지 |
+| [report_190227](../../src/report_190227) | 2019-02-27 | report | (부) static 상태 관리·생성자 (야구 3라운드) | 주 단원 01. 2인 팀 과제 |
 
 ## 주의점
 - 클래스명 오타: Humen, Enermy(study_190308, mk2에서 재사용). 파일명은 Class404OR / Class404DC라 클래스명으로 파일을 찾을 수 없습니다.
-- 한 파일 다중 클래스: report_190220, study_190305(Manager, Ex02App, Ex01App), study_190306(CafeApp 5클래스). 클래스는 grep으로 찾습니다.
+- 한 파일 다중 클래스: report_190220, study_190305(Manager, Ex02App, Ex01App), study_190306(CafeApp 포함 6클래스). 클래스는 grep으로 찾습니다.
 - 같은 Animal 예제가 study_190220Mk2와 study_190305/Ex02App에 중복됩니다.
 - study_190215Mk2/StarApp.main에 attack(z1, d1) 호출이 12회 반복됩니다(의도된 연습).
-- report_190221만 ASCII·주석 없음이고, 나머지는 대부분 MS949입니다.
+- report_190221은 주석이 없고 StartApp.java(한글 출력문, MS949)를 제외한 11개가 ASCII입니다. 나머지 패키지는 대부분 MS949이며 study_190425(2파일)·study_190220Mk3(4파일)도 ASCII입니다.
 
 ## 현업 연결
 인터페이스 타입 매개변수(report_190221)는 Spring의 인터페이스 기반 DI·전략 패턴으로, 팩토리(Gateway)는 `@Bean` 팩토리 메서드로 이어집니다. static 필드로 상태를 공유하는 습관(report_190227)은 싱글턴 빈의 상태 관리와 같은 함정입니다.

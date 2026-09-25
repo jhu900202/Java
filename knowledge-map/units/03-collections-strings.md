@@ -2,7 +2,7 @@
 id: unit.collections-strings
 type: unit
 title: 컬렉션 · 제네릭 · 문자열 처리
-summary: ArrayList/Vector/HashMap·제네릭 클래스·split/StringTokenizer/parseInt·StringBuilder. 근거 3개 + 부 근거 4개.
+summary: ArrayList/Vector/HashMap·제네릭·split/StringTokenizer/parseInt·StringBuilder
 stack: java
 parent: ../ROOT.md
 status: draft

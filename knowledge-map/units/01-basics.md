@@ -2,7 +2,7 @@
 id: unit.basics
 type: unit
 title: 자바 기초 (변수 · 연산자 · 제어문 · 배열)
-summary: 변수·연산자·제어문·배열·정렬·Scanner/Random. 로또·야구·가위바위보 게임으로 반복 연습.
+summary: 변수·연산자·제어문·배열·정렬·Scanner/Random. 로또·야구·가위바위보 게임으로 반복 연습
 stack: java
 parent: ../ROOT.md
 status: draft
@@ -47,7 +47,7 @@ related:
 | [report_190227](../../src/report_190227) | 2019-02-27 | report | 야구 게임(static 상태·생성자) | 부 단원 02. 2인 팀 과제 |
 
 ## 주의점
-- `study_181218/Var1.java`는 UTF-8이지만 한글 주석이 이미 U+FFFD로 깨진 채 커밋되어 있습니다(복구 불가). 나머지는 대부분 MS949입니다.
+- `study_181218/Var1.java`는 UTF-8이지만 한글 주석·문자열이 '占쏙옙' 형태로 깨진 채 커밋되어 있습니다(복구 불가). 나머지는 대부분 MS949입니다.
 - `study_181221/Test5.java`에 빈 `printstar()`가 남아 있습니다.
 - `report_190227/score.java`는 파일명과 클래스명(Score)이 대소문자로 다릅니다(비-public 클래스라 컴파일은 됩니다).
 - `study_181219`의 클래스·생성자 부분은 단원 02가 주 단원입니다.
