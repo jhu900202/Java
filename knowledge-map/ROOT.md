@@ -37,7 +37,7 @@ convention: 1
 - 인코딩 혼재: MS949 85 / ASCII 40 / UTF-8 9 / 기타 1. `study_181218/Var1.java`는 이미 깨진 채 커밋됨.
 - 하드코딩된 민감값이 있는 패키지: study_190304·190313·190328(DB 접속 정보), study_190308_mk3(SMS API 키·시크릿·전화번호), study_190318_mk2(사설 IP). 값은 어디에도 옮기지 않습니다.
 - 바이너리·덤프: `src/study_190304/ojdbc6.jar`(2.1MB), `SMSlib/*.jar`, `src/study_190311/naver.html`(169KB), `test*.txt`.
-- IDE 설정 이중 커밋(Eclipse 절대 경로 + IntelliJ). 빌드 불가, 컴파일 시도하지 않음.
+- 빌드 설정 없음. 컴파일 시도하지 않음.
 - 미완성·오타 파일: ThreadNotify(빈 골격), GenerixEx04(main 비어 있음), Humen/Enermy, score.java 대소문자. 자세한 것은 각 단원의 "주의점".
 
 ## 열린 논의

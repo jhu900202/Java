@@ -29,7 +29,7 @@ JDBC로 Oracle XE에 접속해 조회·삽입하고 자원을 닫는 순서를 �
 - Class.forName·DriverManager·Statement, Scanner 입력으로 LIKE 검색(문자열 연결) — study_190328 (booklist/booklistScanner/name, 진입점 DBTest)
 - 뉴스 100건 URLConnection + jsoup 파싱 → NEWS 테이블 저장. 한 파일에 NewsApp/Utils/News/Crawling/DBConnection(DAO/VO 원형) — study_190313
 - Coolsms SDK + json-simple로 SMS 발송, HashMap 파라미터, 예외 처리 — study_190308_mk3 (ExampleSend)
-- 의존 jar 위치: `SMSlib/javaSDK-2.2.jar`, `SMSlib/json-simple-1.1.1.jar`, `SMSlib/jsoup-1.11.3.jar`, `src/study_190304/ojdbc6.jar`. `.classpath`는 ojdbc6.jar를 상대 경로와 Windows 절대 경로(`C:/oraclexe/...`)로 중복 참조하고, jsoup-1.11.3.jar는 Windows 절대 경로(`C:/Workspace/...`)로만 참조합니다.
+- 의존 jar 위치: `SMSlib/javaSDK-2.2.jar`, `SMSlib/json-simple-1.1.1.jar`, `SMSlib/jsoup-1.11.3.jar`, `src/study_190304/ojdbc6.jar`.
 
 ## 근거 패키지
 | 패키지 | 날짜 | 종류 | 무엇을 연습 | 주의 |
