@@ -1,4 +1,4 @@
-convention: 1 · 원본: jhu900202/Java · 2026-09-25
+convention: 1 · 원본: jhu900202/dev-handbook · 2026-09-25
 
 # 지식맵 안내 (GUIDE)
 
